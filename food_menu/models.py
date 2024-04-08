@@ -7,7 +7,7 @@ class Item(models.Model):
     item_name = models.CharField(max_length=200)
     item_desc = models.CharField(max_length=200)
     item_price = models.DecimalField(max_digits=6, decimal_places=2)
-    item_image = models.ImageField(upload_to='menu_images/', default='default.jpg')
+    item_image = models.ImageField(upload_to='images/', default='default.jpg')
     
     def __str__(self):
         return self.item_name

@@ -1,15 +1,15 @@
 from django.contrib import admin
+from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import path, include
-from food_menu import views as food_menu_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', food_menu_views.IndexClassView.as_view(), name='index'),
-    
+    #include all food_menu views
+    path('', include('food_menu.urls')),
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar
