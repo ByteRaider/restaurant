@@ -6,6 +6,7 @@ from food_menu import views as food_menu_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', food_menu_views.IndexClassView.as_view(), name='index'),
     
 
 ]
