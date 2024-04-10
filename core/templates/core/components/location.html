@@ -1,0 +1,76 @@
+<iframe
+  class="map"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.672960671725!2d-116.9380005236796!3d32.481438099031784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d938f8fc28109b%3A0xda90d208768dd581!2zTMOhemFybyBDw6FyZGVuYXMgMTAsIFplcm1lw7FvLCAyMjEyMCBUaWp1YW5hLCBCLkMu!5e0!3m2!1sen!2smx!4v1712691767235!5m2!1sen!2smx"
+  style="border: 0"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+></iframe>
+<footer>
+  <svg
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0px"
+    y="0px"
+    width="100%"
+    height="350px"
+    viewBox="0 0 1600 900"
+    preserveAspectRatio="xMidYMax slice"
+  >
+    <defs>
+      <linearGradient id="bg">
+        <stop offset="10%" style="stop-color: rgba(5, 255, 80, 0.06)"></stop>
+        <stop offset="50%" style="stop-color: rgba(240, 225, 14, 0.6)"></stop>
+        <stop offset="100%" style="stop-color: rgba(255, 0, 0, 0.2)"></stop>
+      </linearGradient>
+      <path
+        id="wave"
+        fill="url(#bg)"
+        d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+      />
+    </defs>
+    <g>
+      <use xlink:href="#wave" opacity=".3">
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          dur="10s"
+          calcMode="spline"
+          values="270 230; -334 180; 270 230"
+          keyTimes="0; .5; 1"
+          keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+          repeatCount="indefinite"
+        />
+      </use>
+      <use xlink:href="#wave" opacity=".6">
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          dur="8s"
+          calcMode="spline"
+          values="-270 230;243 220;-270 230"
+          keyTimes="0; .6; 1"
+          keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+          repeatCount="indefinite"
+        />
+      </use>
+      <use xlink:href="#wave" opacty=".9">
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          dur="6s"
+          calcMode="spline"
+          values="0 230;-140 200;0 230"
+          keyTimes="0; .4; 1"
+          keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+          repeatCount="indefinite"
+        />
+      </use>
+    </g>
+  </svg>
+</footer>
