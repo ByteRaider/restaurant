@@ -1,0 +1,29 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+}
+map {
+    width: 50%;
+    height: 50%;
+}
+
+/* Base styles for the containers */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+  }
+  
+  .social-media, .schedule {
+    flex-basis: 50%; /* Initially sets each container to take up 50% of the parent container's width */
+    flex-grow: 1; /* Allows each container to grow if necessary, useful for filling the parent container */
+  }
+
+  /* Mobile styles */
+  @media (max-width: 768px) { /* Adjusts the layout for screens smaller than 769px */
+    .social-media, .schedule {
+      flex-basis: 100%; /* Each container takes up 100% width on smaller screens */
+    }
+  }
