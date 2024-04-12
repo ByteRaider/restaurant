@@ -1,15 +1,10 @@
 {% extends 'core/base.html' %} {% block content %} {% load static %}
-<h1 class="text-center">Menu</h1>
+<span class="navbar-brand mb-0 h1">Menu</span>
 {% for item in item_list %}
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid justify-content-center">
-    <span class="navbar-brand mb-0 h1">The Burger Joint</span>
-  </div>
-</nav>
 
 <div class="container py-5">
   <div class="row">
-    <!-- Burgers -->
+    <!-- Menu items -->
     <div class="col-lg-4 col-md-6 mb-4">
       <div class="card">
         <img
@@ -22,12 +17,11 @@
           <p class="card-text">{{ item.item_desc | truncatechars:30 }}</p>
           <div class="d-flex justify-content-between align-items-center">
             <small class="text-muted">${{ item.item_price }}</small>
-            <button class="btn btn-sm btn-outline-secondary">View</button>
+            <a href="{% url 'detail' item.id %}" class="btn btn-info">Ver</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- ... other burgers ... -->
   </div>
 
   {% endfor %}
