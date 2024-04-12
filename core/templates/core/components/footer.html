@@ -3,7 +3,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
 />
 
-<div class="container justify-content-center">
+<div class="container justify-content-center mt-2">
   <div class="social_media">
     <section class="mr-4 p-4">
       <!-- Facebook -->
@@ -58,7 +58,7 @@
     {% if request.user.is_authenticated %}
     <p>
       Hello, {{ request.user }} click here to
-      <a href="{% url 'logout' %}">Logout</a>
+      <form action="{% url 'logout' %}" method="post">{% csrf_token %}<input type="submit" value="Logout"></form>
     </p>
     {% else %}
     <a class="text-body" href="{% url 'login' %}">Login</a>

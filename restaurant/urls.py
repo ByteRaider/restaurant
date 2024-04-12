@@ -9,6 +9,8 @@ urlpatterns = [
     path('', include('food_menu.urls')),
     #include all users views    
     path('users/', include('users.urls')),
+    #include all core views
+    path('restuarant/', include('core.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
