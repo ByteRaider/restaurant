@@ -59,11 +59,16 @@ map {
     color: var(--text-color)
 
   }
-
+  .form-control {
+    width: 80%;
+  }
   /* Mobile styles */
   @media (max-width: 768px) { /* Adjusts the layout for screens smaller than 769px */
     .social-media, .schedule {
       flex-basis: 100%; /* Each container takes up 100% width on smaller screens */
+    }
+    .form-control {
+      width: 100%;
     }
     
   }
