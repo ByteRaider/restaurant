@@ -28,17 +28,8 @@ class FoodDetail(DetailView):
     template_name = 'food_menu/detail.html'
     
 
-def create_item(request):
-    form = ItemForm(request.POST or None)
-    
-    if  form.is_valid():
-        form.save()
-        return redirect('food_menu:index')
-   
-    return render(request,'food_menu/item-form.html',{'form':form})
-
 class CreateItem(CreateView):
-    model = Item;
+    model = Item
     fields = ['item_name','item_desc','item_price','item_image']
     template_name='food_menu/item-form.html'
     
@@ -52,12 +43,12 @@ def update_item(request,id):
     form = ItemForm(request.POST or None,instance=item)
     if form.is_valid():
         form.save()
-        return redirect('food_menu:index')
+        return redirect('index')
     return render(request,'food_menu/item-form.html',{'form':form,'item':item})
         
 def delete_item(request,id):
     item = Item.objects.get(id=id)
     if request.method == 'POST':
         item.delete()
-        return redirect('food_menu:index')
+        return redirect('index')
     return render(request,'food_menu/item-delete.html',{'item':item})
