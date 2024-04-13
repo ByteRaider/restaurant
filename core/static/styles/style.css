@@ -1,14 +1,14 @@
 :root {
-  --main-color: #5eff00;
+  --main-color: #00ffea;
   --primary-color: #ffa500;
-  --secondary-color: #ff3c00;
-  --accent-color: #2bff00;
-  --link-color: #00ffea;
-  --link-hover-color: #0026ff;
-  --text-color-2: #faf9f6;
-  --text-color: #b9d4a2;
+  --secondary-color: #50C878;
+  --accent-color: #dc143c;
+  --text-color-2: #4E3524;
+  --text-color: #50C878;
   --bg-color-2: rgba(255, 255, 255, 0.13);
-  --bg-color: #000000;
+  --bg-color: # #36454F;;
+  --hover-color: #FF6F00;
+  --links-color: #FFB300;
 
 }
 
@@ -18,6 +18,12 @@ body, html {
 }
 body{
     min-height: 100vh; /* Sets the minimum height of the body to the height of the viewport */
+}
+nav {
+    color: var(--text-color);
+}
+nav li:hover {
+    background-color: var(--hover-color);
 }
 /* Base styles for the containers */
 .container {
@@ -90,7 +96,7 @@ body{
     margin-top: 8px;
     font-size: 14px;
     font-weight: 300;
-    border-color: var(--accent-color);
+    border-color: var(--links-color);
   }
  
   /* Mobile styles */

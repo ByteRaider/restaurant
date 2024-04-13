@@ -1,40 +1,33 @@
 {% extends 'core/base.html' %} {% block content %}
 <div class="row mb-4">
-  {% for item in item_list %}
-
-  <div class="container justify-content-center">
-    <!-- Menu items -->
-    <div class="mb-4">
-      <div class="card">
-        {% load static %}
-        <img
-          src="{{ item.item_image.url }}"
-          class="img-fluid card-img-top"
-          alt="{{ item.item_desc}}"
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ item.item_name }}</h5>
-          <p class="card-text">{{ item.item_desc | truncatechars:100 }}</p>
-          <div class="d-flex justify-content-between align-items-center">
-            <small class="text-muted">${{ item.item_price }}</small>
-            <a href="{% url 'detail' item.id %}" class="btn btn-info">Ver</a>
+  <div class="col-12 col-md-8 offset-md-2">
+    <div class="row justify-content-between">
+      {% for item in item_list %}
+      <div class="col-12 col-md-4 float">
+        <span>
+          <div class="card">
+            {% load static %}
+            <img
+              src="{{ item.item_image.url }}"
+              class="img-fluid card-img-top"
+              alt="{{ item.item_desc}}"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ item.item_name }}</h5>
+              <p class="card-text">{{ item.item_desc | truncatechars:100 }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">${{ item.item_price }}</small>
+                <a href="{% url 'detail' item.id %}" class="btn btn-info"
+                  >Ver</a
+                >
+              </div>
+            </div>
           </div>
-        </div>
+        </span>
       </div>
-    </div>
-    {% endfor %}
-
-    <!-- Extras -->
-    <div class="row mt-4">
-      <div class="col">
-        <div class="bg-dark p-4 rounded">
-          <h2 class="text-center mb-3">Extras</h2>
-          <!-- ... extras items ... -->
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
-  <!-- ... end of menu items ... -->
 </div>
 <!-- ... end of row ... -->
 {% endblock%}
