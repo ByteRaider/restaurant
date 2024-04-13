@@ -56,9 +56,13 @@
   </div>
   <div class="text-center p-3">
     {% if request.user.is_authenticated %}
-    <p>
-      Hello, {{ request.user }} click here to
-      <form action="{% url 'logout' %}" method="post">{% csrf_token %}<input type="submit" value="Logout"></form>
+    <p
+      hx-post="{% url 'logout' %}"
+      hx-headers='{"X-CSRFToken":"{{ csrf_token }}"}'
+      hx-swap="innerHTML"
+      hx-target="body"
+    >
+      logout
     </p>
     {% else %}
     <a class="text-body" href="{% url 'login' %}">Login</a>
@@ -66,3 +70,9 @@
   </div>
   <!-- Copyright -->
 </div>
+
+<script>
+  document.body.addEventListener("htmx:configRequest", (event) => {
+    event.detail.headers["X-CSRFToken"] = "{{ csrf_token }}";
+  });
+</script>
