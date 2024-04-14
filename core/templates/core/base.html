@@ -19,10 +19,11 @@
   <body>
     {% include 'core/components/navbar.html' %}
     <section>{% block content %}{% endblock %}</section>
-    <br />
-    <br />
-    <footer class="text-white text-center">
-      <br />
+    <footer
+      class="text-white text-center"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="container">{% include 'core/components/footer.html' %}</div>
     </footer>
     <script

@@ -26,7 +26,6 @@ def detail(request,item_id):
 class FoodDetail(DetailView):
     model = Item
     template_name = 'food_menu/detail.html'
-    
 
 class CreateItem(CreateView):
     model = Item
