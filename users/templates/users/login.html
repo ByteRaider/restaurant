@@ -110,7 +110,7 @@
   <div class="shape"></div>
   <div class="shape"></div>
 </div>
-<form method="POST" action="{% url 'login' %}">
+<form method="POST" action="{% url 'users:login' %}">
   <h3>Login Here</h3>
   {% csrf_token %} {{ form.as_p }}
   <button type="submit">Login</button>

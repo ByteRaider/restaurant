@@ -8,7 +8,7 @@ urlpatterns = [
     #include all food_menu views
     path('', include('food_menu.urls')),
     #include all users views    
-    path('users/', include('users.urls')),
+    path('users/', include(('users.urls', 'users'), namespace='users')),
     #include all core views
     path('restuarant/', include('core.urls')),
 

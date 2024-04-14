@@ -57,7 +57,7 @@
   <div class="text-center p-3">
     {% if request.user.is_authenticated %}
     <p
-      hx-post="{% url 'logout' %}"
+      hx-post="{% url 'users:logout' %}"
       hx-headers='{"X-CSRFToken":"{{ csrf_token }}"}'
       hx-swap="innerHTML"
       hx-target="body"
@@ -65,7 +65,7 @@
       logout
     </p>
     {% else %}
-    <a class="text-body" href="{% url 'login' %}">Login</a>
+    <a class="text-body" href="{% url 'users:login' %}">Login</a>
     {% endif %}
   </div>
   <!-- Copyright -->
