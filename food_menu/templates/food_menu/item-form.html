@@ -1,11 +1,7 @@
 {% extends 'core/base.html' %} {% block content %}
 <div class="form-container">
   <h2>{{title}}</h2>
-  <form
-    method="post"
-    action="{% url 'create_item' %}"
-    enctype="multipart/form-data"
-  >
+  <form method="post" enctype="multipart/form-data">
     {% csrf_token %} {{ form.as_p }}
     <button class="btn-info" type="submit">Submit</button>
   </form>
